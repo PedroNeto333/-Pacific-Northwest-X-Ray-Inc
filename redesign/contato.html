@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Pacific Northwest X-Ray Inc.</title>
+    <link rel="stylesheet" href="darwin.css">
+</head>
+<body>
+    <header>
+        <h1>Contato</h1>
+    </header>
+
+    <button onclick="history.back()" style="
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 1000;
+">
+    ← Voltar
+</button>
+
+    <main class="content">
+        <section>
+            <h2>Informações de Contato</h2>
+            <p>Para entrar em contato conosco, utilize os seguintes métodos:</p>
+            <ul>
+                <li><strong>Telefone:</strong> 800-827-9729 (503-667-3000)</li>
+                <li><strong>E-mail:</strong> <a href="mailto:salesD@pnwx.com">salesD@pnwx.com</a></li>
+                <li><strong>Fax:</strong> (503) 666-8855</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Horários de Atendimento</h2>
+            <p>Estamos disponíveis de segunda a sexta-feira, das 8h às 17h (Horário do Pacífico).</p>
+            <p>Observe que trabalhamos com o horário de verão, então no verão estamos em GMT -7 horas e no inverno em GMT -8 horas.</p>
+        </section>
+
+        <section>
+            <h2>Endereço</h2>
+            <p>Se preferir nos enviar um pedido via correio, utilize o seguinte endereço:</p>
+            <address>
+                ATTN: Order Processing.<br>
+                Pacific Northwest X-Ray Inc.<br>
+                P.O. Box 625<br>
+                Gresham, OR 97030<br>
+                USA
+            </address>
+        </section>
+
+        <section>
+            <h2>Formulário de Contato</h2>
+            <p>Preencha o formulário abaixo e nossa equipe entrará em contato com você:</p>
+            <form action="#" method="post">
+                <label for="name">Nome:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Mensagem:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pacific Northwest X-Ray Inc. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+

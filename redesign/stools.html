@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X-Ray Equipment Directory</title>
+  <link rel="stylesheet" href="stoolss.css">
+</head>
+<style>
+    .zoomable {
+      cursor: zoom-in;
+      transition: 0.3s ease;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #ffffff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+<body>
+  <header>
+    <h1>Stools and Chairs</h1>
+  </header>
+
+  <button onclick="history.back()" style="
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 1000;
+">
+    ← Voltar
+</button>
+
+  <main class="grid-container">
+    <section class="category-card">
+      <img src="img/slk5.jpg" alt="Brewer Phlebotomy">
+      <h2>Brewer Phlebotomy</h2>
+      <ul>
+        <li><strong>Durabilidade:</strong> Garantia de 5 anos.</li>
+        <li><strong>Segurança:</strong> Suporta até 158 kg; superfícies resistentes a bactérias, fungos e produtos químicos; atende à norma BIFMA.</li>
+        <li><strong>Funcionalidade:</strong> Braços angulados para coleta de sangue; superfícies de trabalho removíveis; estrutura de aço soldado com pintura resistente; sistema de ajuste suave nos apoios de braço.</li>
+        <li><strong>Conforto do Paciente:</strong> Espuma de 5 cm e alinhamento seguro do assento.</li>
+        <li><strong>Estética:</strong> 12 opções padrão de estofado (cores especiais sob consulta).</li>
+        <div class="image-container">
+            <img src="img/baixados (1).jpg" alt="Brewer Phlebotomy" class="zoomable" onclick="openImageModal(this)">
+          </div>
+      </ul>
+    </section>
+
+    <section class="category-card">
+      <img src="img/slk6.jpg" alt="Clinical Chair.">
+      <h2>Clinical Chair.</h2>
+      <ul>
+        <li><strong>Durabilidade:</strong> Garantia de 3 anos para estrutura e componentes mecânicos, 1 ano para estofados e rodízios.</li>
+        <li><strong>Segurança:</strong> Suporta até 159 kg. Atende aos padrões de flammabilidade California Technical Bulletin 133.</li>
+        <li><strong>Funcionalidade:</strong> Mecanismo de reclinação unitário, apoio para os pés retrátil, alavanca de reclinação, espuma composta no assento e encosto, rodízios Tente®, opções de suporte para IV e capa para encosto de cabeça.</li>
+        <li><strong>Conforto:</strong> Espuma composta e assento projetado para maior conforto durante longos períodos de uso.</li>
+        <li><strong>Estética:</strong> Design moderno e ergonômico, com acabamentos de alta qualidade e várias opções de estofado.</li>
+        <li><strong>Dimensões:</strong> Altura: 115,6 cm | Largura: 83,8 cm | Profundidade: 92,7 cm | Largura entre braços: 61 cm.</li>
+        <li><strong>Apoios de braço:</strong> Altura ajustável de 67,95 cm a 76,2 cm. Com ângulos variados dependendo da posição reclinada.</li>
+        <li><strong>Peso:</strong> Peso do reclinável: 91 kg | Capacidade máxima de peso: 159 kg.</li>
+    </ul>
+        <p><strong>Garantia:</strong> Estrutura e mecânica: 3 anos | Estofado e rodízios: 1 ano</p>
+      </ul>
+    </section>
+
+    <section class="category-card">
+      <img src="img/slk7.jpg" alt="Screw Adjustable Stool.">
+      <h2>Screw Adjustable Stool.</h2>
+      <ul>
+        <li><strong>Durabilidade:</strong> Garantia de 3 anos para o quadro e componentes mecânicos. 1 ano para componentes estofados e rodízios.</li>
+        <li><strong>Segurança:</strong> Suporta até 159 kg. Certificado para 3-Tesla em ambientes de ressonância magnética.</li>
+        <li><strong>Funcionalidade:</strong> Ajuste de altura de 457 a 622 mm. Base de 4 pernas cromadas ou base de 5 pernas de alumínio fundido, dependendo do modelo.</li>
+        <li><strong>Conforto:</strong> Assento de 368 mm de diâmetro, com 102 mm de espessura. Aro de aço tubular e pé de tubo para estabilidade.</li>
+        <li><strong>Estética:</strong> Estofado "MRI Green", disponível em diferentes modelos com ou sem encosto e braços.</li>
+        <li><strong>Dimensões:</strong> Altura ajustável de 457 a 622 mm. Peso: 9 kg.</li>
+        <li><strong>Modelos Disponíveis:</strong> Modelos com diferentes faixas de altura (17" a 29") e base de rodízios ou pés fixos.</li>
+      </ul>      
+    </section>
+
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pacific Northwest X-Ray Inc.</p>
+  </footer>
+
+   
+   <div id="imageModal" class="modal" onclick="closeImageModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <script>
+    function openImageModal(img) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    }
+
+    function closeImageModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
